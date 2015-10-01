@@ -1,4 +1,24 @@
-body { margin: auto 2em auto 2em; }
-header { background-color: #ddd; padding: 2px 4px 2px 4px; }
-#clockbox { float: right; }
+body { 
+margin: auto 2em auto 2em; 
+font-family: 'helvetica neue', helvetica, arial, sans-serif; 
+}
+header { 
+background-color: #ddd; 
+padding: 2px 4px 2px 4px; 
+}
+#time { 
+text-align: center; 
+margin-top: 20vh; 
+line-height: 5vw;
+}
+.day, .date {
+font-size: 2vw;
+color: gray;
+}
+.time {
+display: block;
+font-weight: bold;
+letter-spacing: -.2vw;
+font-size: 8vw;
+}
 .day:after { content: ","; }
