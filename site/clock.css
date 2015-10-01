@@ -1,6 +1,7 @@
 body { 
 margin: auto 2em auto 2em; 
-font-family: 'helvetica neue', helvetica, arial, sans-serif; 
+font-family: 'helvetica neue', helvetica, arial, sans-serif;
+text-rendering: optimizeLegibility;
 }
 header { 
 background-color: #ddd; 
@@ -18,7 +19,7 @@ color: gray;
 .time {
 display: block;
 font-weight: bold;
-letter-spacing: -.2vw;
+letter-spacing: -.4vw;
 font-size: 8vw;
 }
 .day:after { content: ","; }
