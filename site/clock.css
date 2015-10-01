@@ -1,0 +1,4 @@
+body { margin: auto 2em auto 2em; }
+header { background-color: #ddd; padding: 2px 4px 2px 4px; }
+#clockbox { float: right; }
+.day:after { content: ","; }
