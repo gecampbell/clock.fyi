@@ -7,7 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A clock, for your information">
 <style>
-@import url('clock.css');
+body { 
+margin: auto 2em auto 2em; 
+text-rendering: optimizeLegibility;
+}
+header { 
+background-color: #ddd; 
+padding: 2px 4px 2px 4px; 
+}
+#time { 
+font-family: 'helvetica neue', helvetica, arial, sans-serif;
+text-align: center; 
+margin-top: 20vh; 
+line-height: 5vw;
+}
+.day, .date {
+font-size: 2vw;
+color: gray;
+}
+.time {
+display: block;
+font-weight: bold;
+letter-spacing: -.4vw;
+font-size: 8vw;
+}
+.day:after { content: ","; }
 </style>
 </head>
 <body>
@@ -17,7 +41,6 @@ clock.fyi
 <div id="time"></div>
 </body>
 </html>
-<script type="text/javascript" src="clock.js"></script>
-<script>
-window.onload=GetClock('time');
+<script type="text/javascript">
+function GetClock(n){tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"),tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December"),d=new Date,nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nyear<1e3&&(nyear+=1900),0==nhour?(ap=" AM",nhour=12):nhour<=11?ap=" AM":12==nhour?ap=" PM":nhour>=13&&(ap=" PM",nhour-=12),nmin<=9&&(nmin="0"+nmin),document.getElementById(n).innerHTML='<span class="day">'+tday[nday]+'</span> <span class="date">'+tmonth[nmonth]+" "+ndate+", "+nyear+'</span> <span class="time">'+nhour+":"+nmin+ap+"</span>",setTimeout("GetClock('"+n+"')",1e3)}window.onload=GetClock('time');
 </script>
