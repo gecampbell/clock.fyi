@@ -7,39 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A clock, for your information">
 <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/d54eb4ee-0245-4efb-9454-c1abd564d584.css">
+<link type="text/css" rel="stylesheet" href="http://colophon.xyz/colophon.css">
 <style>
-body { 
-margin: auto 2em auto 2em; 
-text-rendering: optimizeLegibility;
-}
-header { 
-background-color: #ddd; 
-padding: 2px 4px 2px 4px; 
-}
-footer {
-height: 100px;
-text-align: center;
-}
-.right {
-float: right;
-}
 #time { 
-font-family: 'helvetica neue', helvetica, arial, sans-serif;
-text-align: center; 
-margin-top: 20vh; 
-line-height: 5vw;
-clear: both;
+line-height: 60%;
+color: #039;
 }
 .day, .date {
-font-size: 2vw;
-color: gray;
+letter-spacing: 0;
+font-size: 4vw; 
 }
 .time {
-font-family: 'Schmutz W01 Clogged', 'helvetica neue', helvetica, arial, sans-serif;
 display: block;
-font-weight: normal;
-letter-spacing: -.4vw;
-font-size: 8vw;
 }
 .day:after { content: ","; }
 </style>
@@ -47,11 +26,11 @@ font-size: 8vw;
 <body>
 <header>
 clock.fyi
-<span class="right">
-&copy;2015 <a href="http://glenc.xyz">Glen Campbell</a>
-</span>
 </header>
-<div id="time"></div>
+<h1 class="home" id="time"></h1>
+<footer>
+&copy;2015 <a href="http://glenc.xyz">Glen Campbell</a>
+</footer>
 </body>
 </html>
 <script type="text/javascript">
