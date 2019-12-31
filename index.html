@@ -6,28 +6,44 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A clock, for your information">
-<link type="text/css" rel="stylesheet" href="https://broadpool.com/broadpool.css">
 <style>
+body {
+font-family: Helvetica, Arial, Sans-Serif;
+background: white;
+color: black;
+margin-left: 2em;
+margin-right: 2em;
+}
+header {
+color: silver;
+border-bottom: 1px silver solid;
+margin-bottom: 3em;
+}
+footer {
+font-size: smaller;
+position: absolute;
+bottom: 2em;
+color: gray;
+}
+a {
+color: gray;
+}
+a:hover {
+text-decoration: none;
+color: black;
+}
 #time { 
-line-height: 60%;
-color: #039;
-margin: 0 0 2vw 0;
 }
 .day, .date {
-color: gray;
-letter-spacing: -.1vw;
-font-size: 3vw; 
 }
 .day {
-margin-left: .2vw;
 }
 .time {
-font-size: 12vw;
-font-weight: bold;
-display: block;
 color: black;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-letter-spacing: -.4vw;
+display: block;
+font-size: 300%;
+font-weight: bold;
+letter-spacing: -5px;
 }
 .day:after {
 content: ", "; 
@@ -38,10 +54,10 @@ content: ", ";
 <header>
 clock.fyi
 </header>
-<h1 class="home" id="time"></h1>
+<h1 class="home" id="time">00:00</h1>
 <footer>
 A <a href="http://broadpool.com">Broadpool</a> project.
-&copy;2016-2019 <a href="https://glenc.co">Glen Campbell</a>.
+&copy;2016-2020 <a href="https://glenc.co">Glen Campbell</a>.
 All rights reserved.
 </footer>
 </body>
