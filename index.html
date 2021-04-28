@@ -35,7 +35,7 @@ color: black;
 #time { 
 }
 h1 {
-text-align: center;
+text-align: left;
 }
 .day, .date {
 color: gray;
@@ -47,7 +47,7 @@ color: black;
 display: block;
 font-size: 400%;
 font-weight: bold;
-letter-spacing: -.05em;
+letter-spacing: -.07em;
 }
 .day:after {
 content: ", "; 
@@ -67,5 +67,5 @@ All rights reserved.
 </body>
 </html>
 <script type="text/javascript">
-function GetClock(n){tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"),tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December"),d=new Date,nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nyear<1e3&&(nyear+=1900),0==nhour?(ap=" AM",nhour=12):nhour<=11?ap=" AM":12==nhour?ap=" PM":nhour>=13&&(ap=" PM",nhour-=12),nmin<=9&&(nmin="0"+nmin),document.getElementById(n).innerHTML='<span class="day">'+tday[nday]+'</span> <span class="date">'+tmonth[nmonth]+" "+ndate+", "+nyear+'</span> <span class="time">'+nhour+":"+nmin+ap+"</span>",setTimeout("GetClock('"+n+"')",1e3)}window.onload=GetClock('time');
+function GetClock(n){tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"),tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December"),d=new Date,nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nyear<1e3&&(nyear+=1900),0==nhour?(ap="AM",nhour=12):nhour<=11?ap="AM":12==nhour?ap="PM":nhour>=13&&(ap="PM",nhour-=12),nmin<=9&&(nmin="0"+nmin),document.getElementById(n).innerHTML='<span class="day">'+tday[nday]+'</span> <span class="date">'+tmonth[nmonth]+" "+ndate+", "+nyear+'</span> <span class="time">'+nhour+":"+nmin+ap+"</span>",setTimeout("GetClock('"+n+"')",1e3)}window.onload=GetClock('time');
 </script>
